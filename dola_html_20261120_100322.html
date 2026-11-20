@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kelompok 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            color: #ccd6f6;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #8892b0;
+            font-size: 1.1rem;
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .profile-card {
+            background: #112240;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.35s ease;
+            border: 1px solid #233554;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(2, 12, 27, 0.4);
+            border-color: #64ffda;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 25px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #233554;
+            transition: border-color 0.3s ease;
+            background-color: #1e3a5f;
+        }
+
+        .profile-card:hover .avatar {
+            border-color: #64ffda;
+        }
+
+        .name {
+            color: #e6f1ff;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .role {
+            color: #64ffda;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .btn-change {
+            background: transparent;
+            color: #64ffda;
+            border: 1px solid #64ffda;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-change:hover {
+            background: #64ffda;
+            color: #0a192f;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .members-grid {
+                gap: 25px;
+            }
+
+            .profile-card {
+                padding: 30px 20px;
+            }
+
+            .avatar-wrapper {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👥 Kelompok 1</h1>
+            <p class="subtitle">Kenali Anggota Kami</p>
+        </header>
+
+        <div class="members-grid">
+            <!-- Anggota 1: Zhaafir -->
+            <div class="profile-card">
+                <div class="avatar-wrapper">
+                    <img src="https://via.placeholder.com/140/1e3a5f/ffffff?text=Z" alt="Zhaafir" class="avatar" id="img-zhaafir">
+                </div>
+                <h2 class="name">ZHAAFIR</h2>
+                <p class="role">Anggota Kelompok</p>
+                <input type="file" id="file-zhaafir" accept="image/*">
+                <button class="btn-change" onclick="document.getElementById('file-zhaafir').click()">Ganti Foto</button>
+            </div>
+
+            <!-- Anggota 2: Gattan -->
+            <div class="profile-card">
+                <div class="avatar-wrapper">
+                    <img src="https://via.placeholder.com/140/1e3a5f/ffffff?text=G" alt="Gattan" class="avatar" id="img-gattan">
+                </div>
+                <h2 class="name">GATTAN</h2>
+                <p class="role">Anggota Kelompok</p>
+                <input type="file" id="file-gattan" accept="image/*">
+                <button class="btn-change" onclick="document.getElementById('file-gattan').click()">Ganti Foto</button>
+            </div>
+
+            <!-- Anggota 3: Fatih -->
+            <div class="profile-card">
+                <div class="avatar-wrapper">
+                    <img src="https://via.placeholder.com/140/1e3a5f/ffffff?text=F" alt="Fatih" class="avatar" id="img-fatih">
+                </div>
+                <h2 class="name">FATIH</h2>
+                <p class="role">Anggota Kelompok</p>
+                <input type="file" id="file-fatih" accept="image/*">
+                <button class="btn-change" onclick="document.getElementById('file-fatih').click()">Ganti Foto</button>
+            </div>
+
+            <!-- Anggota 4: Adam -->
+            <div class="profile-card">
+                <div class="avatar-wrapper">
+                    <img src="https://via.placeholder.com/140/1e3a5f/ffffff?text=A" alt="Adam" class="avatar" id="img-adam">
+                </div>
+                <h2 class="name">ADAM</h2>
+                <p class="role">Anggota Kelompok</p>
+                <input type="file" id="file-adam" accept="image/*">
+                <button class="btn-change" onclick="document.getElementById('file-adam').click()">Ganti Foto</button>
+            </div>
+
+            <!-- Anggota 5: Athallah -->
+            <div class="profile-card">
+                <div class="avatar-wrapper">
+                    <img src="https://via.placeholder.com/140/1e3a5f/ffffff?text=At" alt="Athallah" class="avatar" id="img-athallah">
+                </div>
+                <h2 class="name">ATHALLAH</h2>
+                <p class="role">Anggota Kelompok</p>
+                <input type="file" id="file-athallah" accept="image/*">
+                <button class="btn-change" onclick="document.getElementById('file-athallah').click()">Ganti Foto</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk mengganti foto profil
+        function setupImageUpload(fileId, imgId) {
+            const fileInput = document.getElementById(fileId);
+            const imgElement = document.getElementById(imgId);
+
+            fileInput.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        imgElement.src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+
+        // Terapkan untuk semua anggota
+        setupImageUpload('file-zhaafir', 'img-zhaafir');
+        setupImageUpload('file-gattan', 'img-gattan');
+        setupImageUpload('file-fatih', 'img-fatih');
+        setupImageUpload('file-adam', 'img-adam');
+        setupImageUpload('file-athallah', 'img-athallah');
+    </script>
+</body>
+</html>
